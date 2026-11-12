@@ -6,8 +6,9 @@ no terminal. Sem interface gráfica: o objetivo é validar o modelo.
 
 Uso:
     python simulador.py ..\\circuitos-qet\\partida_direta.qet
-Depois digite os comandos (ex.: S1, +S1, -S1, sair).
+Depois digite os comandos (ex.: S1, +S1, -S1, t 5, sair).
 """
+import re
 import sys
 import xml.etree.ElementTree as ET
 from collections import defaultdict, deque
@@ -77,6 +78,8 @@ def ler_circuito(caminho):
             "nome": info.get("label", ""),
             "bornes": d["bornes"],          # uuid do borne -> nome (A1, 13...)
             "vinculos": [l.attrib["uuid"] for l in e.iter("link_uuid")],
+            "tipo_contato": d["kind"].get("type", "simple"),  # simple, delayOn, delayOff
+            "info": info,
         }
 
     # Contato sem nome herda o nome da bobina vinculada
@@ -101,6 +104,18 @@ class Simulador:
                             if e["papel"] == "botoeira"}
         self.energizada = {u: False for u, e in elementos.items()
                            if e["papel"] == "bobina"}
+        # Temporização: tempo ajustado (s) e cronômetros de cada bobina
+        self.relogio = 0.0
+        self.t_ajuste = {u: tempo_do_desenho(elementos[u])
+                         for u in self.energizada if self.e_temporizador(u)}
+        self.t_ligada = {u: 0.0 for u in self.energizada}            # há quanto tempo energizada
+        self.t_desligada = {u: float("inf") for u in self.energizada} # há quanto tempo desligada
+
+    def e_temporizador(self, bobina):
+        """Uma bobina é temporizador se algum contato dela for retardado."""
+        return any(e["papel"] == "contato" and bobina in e["vinculos"]
+                   and e["tipo_contato"] != "simple"
+                   for e in self.el.values())
 
     # --- estado de cada chave/contato ---------------------------
     def fechado(self, uuid):
@@ -108,10 +123,20 @@ class Simulador:
         if e["papel"] == "botoeira":
             atuado = self.pressionado[uuid]
         elif e["papel"] == "contato":
-            atuado = any(self.energizada.get(m, False) for m in e["vinculos"])
+            atuado = any(self.contato_atuado(e["tipo_contato"], m)
+                         for m in e["vinculos"] if m in self.energizada)
         else:
             return False
         return atuado if e["estado_normal"] == "NO" else not atuado
+
+    def contato_atuado(self, tipo, bobina):
+        ligada = self.energizada[bobina]
+        T = self.t_ajuste.get(bobina, 0.0)
+        if tipo == "delayOn":     # retardo na energização
+            return ligada and self.t_ligada[bobina] >= T - 1e-9
+        if tipo == "delayOff":    # retardo na desenergização
+            return ligada or self.t_desligada[bobina] < T - 1e-9
+        return ligada             # contato comum
 
     # --- quais bornes estão "vivos" a partir de L ou de N --------
     def alcancaveis(self, nome_origem):
@@ -141,6 +166,10 @@ class Simulador:
                 novo = (a in vL and b in vN) or (b in vL and a in vN)
                 if novo != self.energizada[u]:
                     self.energizada[u] = novo
+                    if novo:
+                        self.t_ligada[u] = 0.0
+                    else:
+                        self.t_desligada[u] = 0.0
                     mudou = True
             if not mudou:
                 return "estável"
@@ -153,14 +182,52 @@ class Simulador:
                 return u
         raise KeyError(f"Botoeira '{nome}' não encontrada")
 
+    def estado(self):
+        return ", ".join(
+            f"{self.el[u]['nome']}={'ENERGIZADA' if v else 'desligada'}"
+            for u, v in self.energizada.items())
+
     def acao(self, nome, pressionar):
         self.pressionado[self.uuid_de(nome)] = pressionar
         situacao = self.resolver()
         verbo = "pressiona" if pressionar else "solta    "
-        estados = ", ".join(
-            f"{self.el[u]['nome']}={'ENERGIZADA' if v else 'desligada'}"
-            for u, v in self.energizada.items())
-        print(f"  {verbo} {nome:<4} -> {estados}   [{situacao}]")
+        print(f"  t={self.relogio:5.1f}s {verbo} {nome:<4} -> {self.estado()}   [{situacao}]")
+
+    def avancar(self, segundos, dt=0.1):
+        """Avança o tempo simulado em passos de dt, mostrando só o que muda."""
+        passos = int(round(segundos / dt))
+        anterior = self.estado()
+        for _ in range(passos):
+            self.relogio += dt
+            for u in self.energizada:
+                if self.energizada[u]:
+                    self.t_ligada[u] += dt
+                else:
+                    self.t_desligada[u] += dt
+            situacao = self.resolver()
+            atual = self.estado()
+            if atual != anterior:
+                print(f"  t={self.relogio:5.1f}s           -> {atual}   [{situacao}]")
+                anterior = atual
+        print(f"  t={self.relogio:5.1f}s (fim)      -> {self.estado()}")
+
+    def ajustar_tempo(self, nome, segundos):
+        for u in self.t_ajuste:
+            if self.el[u]["nome"].lower() == nome.lower():
+                self.t_ajuste[u] = segundos
+                print(f"  {self.el[u]['nome']} ajustado para {segundos:g} s")
+                return
+        raise KeyError(f"Temporizador '{nome}' não encontrado")
+
+
+def tempo_do_desenho(elemento, padrao=5.0):
+    """Procura um tempo escrito em qualquer campo do elemento (ex.: '5s', 't=2,5 s').
+    O QElectroTech não tem campo de tempo; se nada for encontrado, usa o padrão."""
+    for valor in elemento["info"].values():
+        m = re.search(r"(\d+(?:[.,]\d+)?)\s*s\b", valor)
+        if m:
+            return float(m.group(1).replace(",", "."))
+    return padrao
 
 
 # ---------------------------------------------------------------
@@ -182,14 +249,29 @@ def main():
         print(f"\nATENÇÃO: {len(sem_nome)} botoeira(s) sem nome no desenho. "
               "Elas não podem ser acionadas. Dê nome a elas no QElectroTech.")
 
+    soltos = [e for e in elementos.values()
+              if e["papel"] == "contato" and not e["vinculos"]]
+    if soltos:
+        print(f"ATENÇÃO: {len(soltos)} contato(s) sem vínculo com bobina. "
+              "Eles nunca vão atuar.")
+
     sim = Simulador(elementos, fios)
+    nomes_tipo = {"delayOn": "retardo na energização",
+                  "delayOff": "retardo na desenergização"}
+    for u, T in sim.t_ajuste.items():
+        tipos = {e["tipo_contato"] for e in elementos.values()
+                 if u in e["vinculos"] and e["tipo_contato"] != "simple"}
+        desc = ", ".join(nomes_tipo.get(t, t) for t in tipos)
+        print(f"Temporizador {elementos[u]['nome']}: {T:g} s ({desc})")
     print("\nEstado inicial:", sim.resolver())
     print("""
 Comandos:
-  S1      pulso (pressiona e solta)
-  +S1     mantém pressionada
-  -S1     solta
-  sair    encerra
+  S1          pulso (pressiona e solta)
+  +S1         mantém pressionada
+  -S1         solta
+  t 5         avança 5 segundos
+  tempo KT1 3 ajusta o temporizador KT1 para 3 s
+  sair        encerra
 """)
     while True:
         try:
@@ -200,8 +282,13 @@ Comandos:
             continue
         if cmd.lower() in ("sair", "q"):
             break
+        partes = cmd.split()
         try:
-            if cmd[0] == "+":
+            if partes[0].lower() == "t" and len(partes) == 2:
+                sim.avancar(float(partes[1].replace(",", ".")))
+            elif partes[0].lower() == "tempo" and len(partes) == 3:
+                sim.ajustar_tempo(partes[1], float(partes[2].replace(",", ".")))
+            elif cmd[0] == "+":
                 sim.acao(cmd[1:], True)
             elif cmd[0] == "-":
                 sim.acao(cmd[1:], False)
@@ -210,6 +297,8 @@ Comandos:
                 sim.acao(cmd, False)
         except KeyError as erro:
             print(" ", erro.args[0])
+        except ValueError:
+            print("  Valor inválido. Exemplo: t 5")
 
 
 if __name__ == "__main__":

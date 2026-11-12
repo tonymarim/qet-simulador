@@ -58,3 +58,22 @@ Os `terminal*` são os uuid dos bornes da definição (não os `id` numéricos d
 3. **Contato vinculado pode ter `label` vazio:** o nome vem da bobina mestre.
 4. **Maiúsculas e minúsculas:** a bobina foi salva como `k1`. O simulador compara
    nomes sem diferenciar maiúsculas e minúsculas.
+
+## Temporizadores
+
+- A bobina do temporizador é uma bobina comum (`link_type="master"`, `type=coil`).
+- O **tipo de temporização fica no contato** (`kindInformations/type`):
+  `delayOn` = retardo na energização ("conta e liga"); `delayOff` = retardo na desenergização.
+- **Não existe campo de tempo.** O simulador usa 5 s por padrão, aceita o comando `tempo KT1 3`
+  e lê um valor como `5s` escrito em qualquer campo de texto da bobina.
+- **Defeito na biblioteca do QElectroTech:** `con_simple_tmp_r.elmt` (`delayOff`) e
+  `con_simple_tmp_t.elmt` (`delayOn`) têm o **mesmo nome em PT e EN**
+  ("tempo retardado de ligado" / "switch-on delay timer"). Em FR e DE os nomes estão certos
+  (*tempo repos* / *abfallverzögert* para o `_r`; *tempo travail* / *ansprechverzögert* para o `_t`).
+
+## Mais armadilhas
+
+5. **Elementos sobrepostos:** um contato colado exatamente sobre outro fica invisível na tela.
+   O simulador avisa contatos sem vínculo.
+6. **Editar o .qet com o QElectroTech aberto:** ao salvar, o programa grava por cima das alterações
+   feitas fora dele.
