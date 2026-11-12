@@ -1,0 +1,757 @@
+<project title="partida_diret" version="0.100.0">
+    <properties>
+        <property name="saveddate" show="1">12/11/2026</property>
+        <property name="saveddate-eu" show="1">12-11-2026</property>
+        <property name="saveddate-us" show="1">2026-11-12</property>
+        <property name="savedfilename" show="1">reversao</property>
+        <property name="savedfilepath" show="1">C:/Projetos/simulador-comandos/circuitos-qet/reversao.qet</property>
+        <property name="savedtime" show="1">11:14</property>
+    </properties>
+    <newdiagrams>
+        <border cols="17" colsize="60" rows="8" displaycols="true" displayrows="true" rowsize="80"/>
+        <inset date="null" title="" auto_page_num="" displayAt="bottom" filename="" author="" plant="" locmach="" indexrev="" folio="%id/%total" version=""/>
+        <conductors num="_" conductor_color="" type="multi" displaytext="1" onetextperfolio="0" vertirotatetext="270" color2="#000000" horizrotatetext="0" bicolor="false" condsize="1" numsize="7" tension_protocol="" bus="" dash-size="1" conductor_section="" vertical-alignment="AlignRight" function="" horizontal-alignment="AlignBottom" text_color="#000000" cable="" formula=""/>
+        <report label="%f-%l%c"/>
+        <xrefs>
+            <xref type="protection" displayhas="cross" offset="0" slave_label="(%f-%l%c)" showpowerctc="true" delayprefix="" switchprefix="" powerprefix="" snapto="label" xrefpos="" master_label="%f-%l%c"/>
+            <xref type="coil" displayhas="cross" offset="0" slave_label="(%f-%l%c)" showpowerctc="true" delayprefix="" switchprefix="" powerprefix="" snapto="label" xrefpos="" master_label="%f-%l%c"/>
+            <xref type="commutator" displayhas="cross" offset="0" slave_label="(%f-%l%c)" showpowerctc="true" delayprefix="" switchprefix="" powerprefix="" snapto="label" xrefpos="" master_label="%f-%l%c"/>
+        </xrefs>
+        <conductors_autonums freeze_new_conductors="false" current_autonum=""/>
+        <folio_autonums/>
+        <element_autonums freeze_new_elements="false" current_autonum=""/>
+    </newdiagrams>
+    <diagram colsize="60" indexrev="" displaycols="true" plant="" locmach="" title="" rows="8" rowsize="80" height="660" filename="" order="1" date="null" author="" version="0.100.0" freezeNewConductor="false" cols="17" displayAt="bottom" auto_page_num="" folio="%id/%total" displayrows="true" freezeNewElement="false">
+        <defaultconductor num="_" conductor_color="" type="multi" displaytext="1" vertirotatetext="270" onetextperfolio="0" color2="#000000" horizrotatetext="0" bicolor="false" condsize="1" numsize="7" tension_protocol="" bus="" dash-size="1" conductor_section="" vertical-alignment="AlignRight" function="" horizontal-alignment="AlignBottom" text_color="#000000" cable="" formula=""/>
+        <elements>
+            <element type="embed://import/10_electric/10_allpole/310_relays_contactors_contacts/01_coils/comm_electronique.elmt" x="130" y="370" z="10" freezeLabel="false" prefix="K" uuid="{1d789795-331c-4335-bd63-b6791dc0ca13}" orientation="0">
+                <terminals>
+                    <terminal x="0" y="-16" id="0" orientation="0"/>
+                    <terminal x="0" y="16" id="1" orientation="2"/>
+                </terminals>
+                <inputs/>
+                <links_uuids>
+                    <link_uuid uuid="{d61e6974-982b-4a0b-a84c-e424e3f7fbbf}"/>
+                    <link_uuid uuid="{c2f51e6b-5d15-435a-8f1a-f3526251e146}"/>
+                </links_uuids>
+                <elementInformations>
+                    <elementInformation name="formula" show="1">K1</elementInformation>
+                    <elementInformation name="label" show="1">K1</elementInformation>
+                </elementInformations>
+                <dynamic_texts>
+                    <dynamic_elmt_text frame="false" Halignment="AlignLeft" x="-14" y="10" rotation="0" font="Liberation Sans,4,-1,5,25,0,0,0,0,0,Regular" text_width="-1" uuid="{77c28473-ae73-4632-a471-7a76921c4ed2}" keep_visual_rotation="false" text_from="UserText" Valignment="AlignTop">
+                        <text>A2</text>
+                    </dynamic_elmt_text>
+                    <dynamic_elmt_text frame="false" Halignment="AlignLeft" x="-14" y="-25" rotation="0" font="Liberation Sans,4,-1,5,25,0,0,0,0,0,Regular" text_width="-1" uuid="{5d91ecff-f357-4eef-a78b-7bc178f92f9b}" keep_visual_rotation="false" text_from="UserText" Valignment="AlignTop">
+                        <text>A1</text>
+                    </dynamic_elmt_text>
+                    <dynamic_elmt_text frame="false" Halignment="AlignLeft" x="16" y="-12" rotation="0" font="Liberation Sans,9,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{2455970c-5dde-44d2-b9eb-83dd7734ed08}" keep_visual_rotation="false" text_from="ElementInfo" Valignment="AlignTop">
+                        <text>K1</text>
+                        <info_name>label</info_name>
+                    </dynamic_elmt_text>
+                </dynamic_texts>
+                <texts_groups/>
+            </element>
+            <element type="embed://import/10_electric/10_allpole/380_signaling_operating/20_push_buttons/foot_no.elmt" x="130" y="200" z="10" freezeLabel="false" prefix="S" uuid="{13b3a8b8-2ceb-4880-bf15-65cfc799681e}" orientation="0">
+                <terminals>
+                    <terminal x="0" y="-16" id="2" orientation="0"/>
+                    <terminal x="0" y="16" id="3" orientation="2"/>
+                </terminals>
+                <inputs/>
+                <elementInformations>
+                    <elementInformation name="formula" show="1">S1</elementInformation>
+                    <elementInformation name="label" show="1">S1</elementInformation>
+                </elementInformations>
+                <dynamic_texts>
+                    <dynamic_elmt_text frame="false" Halignment="AlignLeft" x="-3" y="-23" rotation="0" font="Liberation Sans,3,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{7be50468-4954-4aa3-924b-c3b912b5a199}" keep_visual_rotation="true" text_from="UserText" Valignment="AlignTop">
+                        <text>13</text>
+                    </dynamic_elmt_text>
+                    <dynamic_elmt_text frame="false" Halignment="AlignLeft" x="-3" y="9" rotation="0" font="Liberation Sans,3,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{cde3e5c0-24b2-4f0e-9e47-518e9f719dde}" keep_visual_rotation="true" text_from="UserText" Valignment="AlignTop">
+                        <text>14</text>
+                    </dynamic_elmt_text>
+                    <dynamic_elmt_text frame="false" Halignment="AlignLeft" x="-10" y="5" rotation="0" font="Liberation Sans,9,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{61b2ea26-0d83-428e-b8ea-3fb43e0a68f3}" keep_visual_rotation="true" text_from="ElementInfo" Valignment="AlignTop">
+                        <text>S1</text>
+                        <info_name>label</info_name>
+                    </dynamic_elmt_text>
+                </dynamic_texts>
+                <texts_groups/>
+            </element>
+            <element type="embed://import/10_electric/10_allpole/380_signaling_operating/20_push_buttons/foot_nc.elmt" x="130" y="90" z="10" freezeLabel="false" prefix="S" uuid="{8d03ef62-825a-4f83-83a2-3838cbf941c1}" orientation="0">
+                <terminals>
+                    <terminal x="0" y="-16" id="4" orientation="0"/>
+                    <terminal x="0" y="16" id="5" orientation="2"/>
+                </terminals>
+                <inputs/>
+                <elementInformations>
+                    <elementInformation name="formula" show="1">S0</elementInformation>
+                    <elementInformation name="label" show="1">S0</elementInformation>
+                </elementInformations>
+                <dynamic_texts>
+                    <dynamic_elmt_text frame="false" Halignment="AlignLeft" x="-3" y="-24" rotation="0" font="Liberation Sans,3,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{4fa6e3f1-108c-4aba-b08f-ebede05e844b}" keep_visual_rotation="true" text_from="UserText" Valignment="AlignTop">
+                        <text>21</text>
+                    </dynamic_elmt_text>
+                    <dynamic_elmt_text frame="false" Halignment="AlignLeft" x="-3" y="10" rotation="0" font="Liberation Sans,3,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{4c45cc54-9ef7-4fe2-b25f-231ce3741346}" keep_visual_rotation="true" text_from="UserText" Valignment="AlignTop">
+                        <text>22</text>
+                    </dynamic_elmt_text>
+                    <dynamic_elmt_text frame="false" Halignment="AlignLeft" x="-10" y="5" rotation="0" font="Liberation Sans,9,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{04335228-374f-4ed8-8804-3a0db582d313}" keep_visual_rotation="true" text_from="ElementInfo" Valignment="AlignTop">
+                        <text>S0</text>
+                        <info_name>label</info_name>
+                    </dynamic_elmt_text>
+                </dynamic_texts>
+                <texts_groups/>
+            </element>
+            <element type="embed://import/10_electric/10_allpole/110_network_supplies/src_1pn.elmt" x="50" y="70" z="10" freezeLabel="false" prefix="" uuid="{b861c59d-c9a0-43c4-b0cb-05823c37467d}" orientation="0">
+                <terminals>
+                    <terminal x="6" y="-10" id="6" orientation="1"/>
+                    <terminal x="6" y="10" id="7" orientation="1"/>
+                </terminals>
+                <inputs/>
+                <elementInformations/>
+                <dynamic_texts>
+                    <dynamic_elmt_text frame="false" Halignment="AlignLeft" x="-5" y="-37.95" rotation="0" font="Liberation Sans,9,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{dfbd609d-9b71-4267-93d2-35d3d1a92a08}" keep_visual_rotation="false" text_from="ElementInfo" Valignment="AlignTop">
+                        <text></text>
+                        <info_name>label</info_name>
+                    </dynamic_elmt_text>
+                </dynamic_texts>
+                <texts_groups/>
+            </element>
+            <element type="embed://import/10_electric/10_allpole/310_relays_contactors_contacts/02_contacts_cross_referencing/01_auxiliary_contacts/con_simple.elmt" x="170" y="200" z="10" freezeLabel="false" prefix="S" uuid="{d61e6974-982b-4a0b-a84c-e424e3f7fbbf}" orientation="0">
+                <terminals>
+                    <terminal x="0" y="-16" id="8" orientation="0"/>
+                    <terminal x="0" y="16" id="9" orientation="2"/>
+                </terminals>
+                <inputs/>
+                <links_uuids>
+                    <link_uuid uuid="{1d789795-331c-4335-bd63-b6791dc0ca13}"/>
+                </links_uuids>
+                <dynamic_texts>
+                    <dynamic_elmt_text frame="false" Halignment="AlignLeft" x="2.75" y="-9.5" rotation="0" font="Liberation Sans,9,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{47485879-ffd9-4857-a192-60c1bff3f3c5}" keep_visual_rotation="false" text_from="ElementInfo" Valignment="AlignTop">
+                        <text>K1</text>
+                        <info_name>label</info_name>
+                    </dynamic_elmt_text>
+                    <dynamic_elmt_text frame="false" Halignment="AlignLeft" x="0" y="0" rotation="0" font="Liberation Sans,9,-1,0,50,0,0,0,0,0,Regular" text_width="-1" uuid="{cc20a9cf-cbb1-46d2-95e2-abd3505e6169}" keep_visual_rotation="true" text_from="UserText" Valignment="AlignTop">
+                        <text></text>
+                    </dynamic_elmt_text>
+                    <dynamic_elmt_text frame="false" Halignment="AlignLeft" x="0" y="0" rotation="0" font="Liberation Sans,9,-1,0,50,0,0,0,0,0,Regular" text_width="-1" uuid="{59908d7a-88ec-4386-a7b6-2d8679b15c10}" keep_visual_rotation="true" text_from="UserText" Valignment="AlignTop">
+                        <text></text>
+                    </dynamic_elmt_text>
+                    <dynamic_elmt_text frame="false" Halignment="AlignLeft" x="0" y="0" rotation="0" font="Liberation Sans,9,-1,0,50,0,0,0,0,0,Regular" text_width="-1" uuid="{6a996aea-55b7-4e5a-a91d-33066c03f639}" keep_visual_rotation="true" text_from="UserText" Valignment="AlignTop">
+                        <text></text>
+                    </dynamic_elmt_text>
+                    <dynamic_elmt_text frame="false" Halignment="AlignLeft" x="0" y="0" rotation="0" font="Liberation Sans,9,-1,0,50,0,0,0,0,0,Regular" text_width="-1" uuid="{3dededfe-8440-40cb-8ec5-a1eef05ab14f}" keep_visual_rotation="true" text_from="UserText" Valignment="AlignTop">
+                        <text></text>
+                    </dynamic_elmt_text>
+                    <dynamic_elmt_text frame="false" Halignment="AlignLeft" x="0" y="0" rotation="0" font="Liberation Sans,9,-1,0,50,0,0,0,0,0,Regular" text_width="-1" uuid="{aec9c149-0bce-40ac-9aa2-7833d85ee2ff}" keep_visual_rotation="true" text_from="UserText" Valignment="AlignTop">
+                        <text></text>
+                    </dynamic_elmt_text>
+                    <dynamic_elmt_text frame="false" Halignment="AlignLeft" x="0" y="0" rotation="0" font="Liberation Sans,9,-1,0,50,0,0,0,0,0,Regular" text_width="-1" uuid="{3fc6a921-4dad-4b12-bda4-decd83766408}" keep_visual_rotation="true" text_from="UserText" Valignment="AlignTop">
+                        <text></text>
+                    </dynamic_elmt_text>
+                </dynamic_texts>
+                <texts_groups/>
+            </element>
+            <element type="embed://import/10_electric/10_allpole/310_relays_contactors_contacts/02_contacts_cross_referencing/01_auxiliary_contacts/con_simple_nf.elmt" x="130" y="290" z="10" freezeLabel="false" prefix="S" uuid="{74e73458-889a-42fc-9d2b-7a19612c6975}" orientation="0">
+                <terminals>
+                    <terminal x="0" y="-16" id="10" orientation="0"/>
+                    <terminal x="0" y="16" id="11" orientation="2"/>
+                </terminals>
+                <inputs/>
+                <links_uuids>
+                    <link_uuid uuid="{e74e3878-2922-4e5d-b9f3-a28c0671dd9f}"/>
+                </links_uuids>
+                <dynamic_texts>
+                    <dynamic_elmt_text frame="false" Halignment="AlignLeft" x="5.75" y="-9.5" rotation="0" font="Liberation Sans,9,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{36fe36db-8776-4592-9218-2475d66ab291}" keep_visual_rotation="false" text_from="ElementInfo" Valignment="AlignTop">
+                        <text>K2</text>
+                        <info_name>label</info_name>
+                    </dynamic_elmt_text>
+                </dynamic_texts>
+                <texts_groups/>
+            </element>
+            <element type="embed://import/10_electric/10_allpole/380_signaling_operating/20_push_buttons/foot_no.elmt" x="270" y="200" z="10" freezeLabel="false" prefix="S" uuid="{cf40b253-c8be-4bd7-a882-9356dfdf36fd}" orientation="0">
+                <terminals>
+                    <terminal x="0" y="-16" id="12" orientation="0"/>
+                    <terminal x="0" y="16" id="13" orientation="2"/>
+                </terminals>
+                <inputs/>
+                <elementInformations>
+                    <elementInformation name="formula" show="1">S2</elementInformation>
+                    <elementInformation name="label" show="1">S2</elementInformation>
+                </elementInformations>
+                <dynamic_texts>
+                    <dynamic_elmt_text frame="false" Halignment="AlignLeft" x="-3" y="-23" rotation="0" font="Liberation Sans,3,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{7be50468-4954-4aa3-924b-c3b912b5a199}" keep_visual_rotation="true" text_from="UserText" Valignment="AlignTop">
+                        <text>13</text>
+                    </dynamic_elmt_text>
+                    <dynamic_elmt_text frame="false" Halignment="AlignLeft" x="-3" y="9" rotation="0" font="Liberation Sans,3,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{cde3e5c0-24b2-4f0e-9e47-518e9f719dde}" keep_visual_rotation="true" text_from="UserText" Valignment="AlignTop">
+                        <text>14</text>
+                    </dynamic_elmt_text>
+                    <dynamic_elmt_text frame="false" Halignment="AlignLeft" x="-10" y="5" rotation="0" font="Liberation Sans,9,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{61b2ea26-0d83-428e-b8ea-3fb43e0a68f3}" keep_visual_rotation="true" text_from="ElementInfo" Valignment="AlignTop">
+                        <text>S2</text>
+                        <info_name>label</info_name>
+                    </dynamic_elmt_text>
+                </dynamic_texts>
+                <texts_groups/>
+            </element>
+            <element type="embed://import/10_electric/10_allpole/310_relays_contactors_contacts/02_contacts_cross_referencing/01_auxiliary_contacts/con_simple_nf.elmt" x="270" y="290" z="10" freezeLabel="false" prefix="S" uuid="{c2f51e6b-5d15-435a-8f1a-f3526251e146}" orientation="0">
+                <terminals>
+                    <terminal x="0" y="-16" id="14" orientation="0"/>
+                    <terminal x="0" y="16" id="15" orientation="2"/>
+                </terminals>
+                <inputs/>
+                <links_uuids>
+                    <link_uuid uuid="{1d789795-331c-4335-bd63-b6791dc0ca13}"/>
+                </links_uuids>
+                <dynamic_texts>
+                    <dynamic_elmt_text frame="false" Halignment="AlignLeft" x="5.75" y="-9.5" rotation="0" font="Liberation Sans,9,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{47dd00e2-bb64-48c0-aab6-0860e7635bfd}" keep_visual_rotation="false" text_from="ElementInfo" Valignment="AlignTop">
+                        <text>K1</text>
+                        <info_name>label</info_name>
+                    </dynamic_elmt_text>
+                </dynamic_texts>
+                <texts_groups/>
+            </element>
+            <element type="embed://import/10_electric/10_allpole/310_relays_contactors_contacts/02_contacts_cross_referencing/01_auxiliary_contacts/con_simple.elmt" x="330" y="200" z="10" freezeLabel="false" prefix="S" uuid="{cf98f08a-0a41-41b5-beab-e416b0015321}" orientation="0">
+                <terminals>
+                    <terminal x="0" y="-16" id="16" orientation="0"/>
+                    <terminal x="0" y="16" id="17" orientation="2"/>
+                </terminals>
+                <inputs/>
+                <links_uuids>
+                    <link_uuid uuid="{e74e3878-2922-4e5d-b9f3-a28c0671dd9f}"/>
+                </links_uuids>
+                <elementInformations/>
+                <dynamic_texts>
+                    <dynamic_elmt_text frame="false" Halignment="AlignLeft" x="2.75" y="-9.5" rotation="0" font="Liberation Sans,9,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{47485879-ffd9-4857-a192-60c1bff3f3c5}" keep_visual_rotation="false" text_from="ElementInfo" Valignment="AlignTop">
+                        <text>K2</text>
+                        <info_name>label</info_name>
+                    </dynamic_elmt_text>
+                    <dynamic_elmt_text frame="false" Halignment="AlignLeft" x="0" y="0" rotation="0" font="Liberation Sans,9,-1,0,50,0,0,0,0,0,Regular" text_width="-1" uuid="{cc20a9cf-cbb1-46d2-95e2-abd3505e6169}" keep_visual_rotation="true" text_from="UserText" Valignment="AlignTop">
+                        <text></text>
+                    </dynamic_elmt_text>
+                    <dynamic_elmt_text frame="false" Halignment="AlignLeft" x="0" y="0" rotation="0" font="Liberation Sans,9,-1,0,50,0,0,0,0,0,Regular" text_width="-1" uuid="{59908d7a-88ec-4386-a7b6-2d8679b15c10}" keep_visual_rotation="true" text_from="UserText" Valignment="AlignTop">
+                        <text></text>
+                    </dynamic_elmt_text>
+                    <dynamic_elmt_text frame="false" Halignment="AlignLeft" x="0" y="0" rotation="0" font="Liberation Sans,9,-1,0,50,0,0,0,0,0,Regular" text_width="-1" uuid="{6a996aea-55b7-4e5a-a91d-33066c03f639}" keep_visual_rotation="true" text_from="UserText" Valignment="AlignTop">
+                        <text></text>
+                    </dynamic_elmt_text>
+                    <dynamic_elmt_text frame="false" Halignment="AlignLeft" x="0" y="0" rotation="0" font="Liberation Sans,9,-1,0,50,0,0,0,0,0,Regular" text_width="-1" uuid="{3dededfe-8440-40cb-8ec5-a1eef05ab14f}" keep_visual_rotation="true" text_from="UserText" Valignment="AlignTop">
+                        <text></text>
+                    </dynamic_elmt_text>
+                    <dynamic_elmt_text frame="false" Halignment="AlignLeft" x="0" y="0" rotation="0" font="Liberation Sans,9,-1,0,50,0,0,0,0,0,Regular" text_width="-1" uuid="{aec9c149-0bce-40ac-9aa2-7833d85ee2ff}" keep_visual_rotation="true" text_from="UserText" Valignment="AlignTop">
+                        <text></text>
+                    </dynamic_elmt_text>
+                    <dynamic_elmt_text frame="false" Halignment="AlignLeft" x="0" y="0" rotation="0" font="Liberation Sans,9,-1,0,50,0,0,0,0,0,Regular" text_width="-1" uuid="{3fc6a921-4dad-4b12-bda4-decd83766408}" keep_visual_rotation="true" text_from="UserText" Valignment="AlignTop">
+                        <text></text>
+                    </dynamic_elmt_text>
+                </dynamic_texts>
+                <texts_groups/>
+            </element>
+            <element type="embed://import/10_electric/10_allpole/310_relays_contactors_contacts/01_coils/comm_electronique.elmt" x="270" y="370" z="10" freezeLabel="false" prefix="K" uuid="{e74e3878-2922-4e5d-b9f3-a28c0671dd9f}" orientation="0">
+                <terminals>
+                    <terminal x="0" y="-16" id="18" orientation="0"/>
+                    <terminal x="0" y="16" id="19" orientation="2"/>
+                </terminals>
+                <inputs/>
+                <links_uuids>
+                    <link_uuid uuid="{cf98f08a-0a41-41b5-beab-e416b0015321}"/>
+                    <link_uuid uuid="{74e73458-889a-42fc-9d2b-7a19612c6975}"/>
+                </links_uuids>
+                <elementInformations>
+                    <elementInformation name="formula" show="1">K2</elementInformation>
+                    <elementInformation name="label" show="1">K2</elementInformation>
+                </elementInformations>
+                <dynamic_texts>
+                    <dynamic_elmt_text frame="false" Halignment="AlignLeft" x="-14" y="10" rotation="0" font="Liberation Sans,4,-1,5,25,0,0,0,0,0,Regular" text_width="-1" uuid="{77c28473-ae73-4632-a471-7a76921c4ed2}" keep_visual_rotation="false" text_from="UserText" Valignment="AlignTop">
+                        <text>A2</text>
+                    </dynamic_elmt_text>
+                    <dynamic_elmt_text frame="false" Halignment="AlignLeft" x="-14" y="-25" rotation="0" font="Liberation Sans,4,-1,5,25,0,0,0,0,0,Regular" text_width="-1" uuid="{5d91ecff-f357-4eef-a78b-7bc178f92f9b}" keep_visual_rotation="false" text_from="UserText" Valignment="AlignTop">
+                        <text>A1</text>
+                    </dynamic_elmt_text>
+                    <dynamic_elmt_text frame="false" Halignment="AlignLeft" x="16" y="-12" rotation="0" font="Liberation Sans,9,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{2455970c-5dde-44d2-b9eb-83dd7734ed08}" keep_visual_rotation="false" text_from="ElementInfo" Valignment="AlignTop">
+                        <text>K2</text>
+                        <info_name>label</info_name>
+                    </dynamic_elmt_text>
+                </dynamic_texts>
+                <texts_groups/>
+            </element>
+        </elements>
+        <conductors>
+            <conductor num="" conductor_color="" type="multi" element2_name="Foot Switch (NO)" x="0" element1_linked="K2" y="0" displaytext="1" vertirotatetext="270" onetextperfolio="0" color2="#000000" horizrotatetext="0" element1_name="Contacto simples (NO)" bicolor="false" element1="{cf98f08a-0a41-41b5-beab-e416b0015321}" condsize="1" element2="{cf40b253-c8be-4bd7-a882-9356dfdf36fd}" numsize="7" tension_protocol="" dash-size="1" bus="" freezeLabel="false" conductor_section="" vertical-alignment="AlignRight" terminal1="{b9683546-f0a2-4386-b114-ef1d46b2df3d}" terminalname1="" terminal2="{f8e508cc-0ac1-420b-9b64-b9f012fbd7de}" terminalname2="14" element2_label="S2" element1_label="" function="" horizontal-alignment="AlignBottom" text_color="#000000" formula="" cable="">
+                <sequentialNumbers/>
+            </conductor>
+            <conductor num="" conductor_color="" type="multi" element2_name="Foot Switch (NO)" x="0" element1_linked="K2" y="0" displaytext="1" vertirotatetext="270" onetextperfolio="0" color2="#000000" horizrotatetext="0" element1_name="Contacto simples (NC)" bicolor="false" element1="{74e73458-889a-42fc-9d2b-7a19612c6975}" condsize="1" element2="{13b3a8b8-2ceb-4880-bf15-65cfc799681e}" numsize="7" tension_protocol="" dash-size="1" bus="" freezeLabel="false" conductor_section="" vertical-alignment="AlignRight" terminal1="{d6e0cd1d-504b-405a-810c-7d5ae24c981d}" terminalname1="" terminal2="{f8e508cc-0ac1-420b-9b64-b9f012fbd7de}" terminalname2="14" element2_label="S1" element1_label="" function="" horizontal-alignment="AlignBottom" text_color="#000000" formula="" cable="">
+                <sequentialNumbers/>
+            </conductor>
+            <conductor num="" conductor_color="" type="multi" element2_name="Foot Switch (NO)" x="0" y="0" displaytext="1" vertirotatetext="270" onetextperfolio="0" color2="#000000" horizrotatetext="0" element1_name="Foot Switch (NC)" bicolor="false" element1="{8d03ef62-825a-4f83-83a2-3838cbf941c1}" condsize="1" numsize="7" element2="{cf40b253-c8be-4bd7-a882-9356dfdf36fd}" tension_protocol="" dash-size="1" bus="" freezeLabel="false" conductor_section="" vertical-alignment="AlignRight" terminal1="{3f32169a-026a-43e8-af61-efa7268f5512}" terminalname1="22" terminal2="{209816c7-3f76-4f05-84d1-722f15518734}" terminalname2="13" element2_label="S2" element1_label="S0" function="" horizontal-alignment="AlignBottom" text_color="#000000" formula="" cable="">
+                <segment orientation="vertical" length="10"/>
+                <segment orientation="horizontal" length="0"/>
+                <segment orientation="horizontal" length="140"/>
+                <segment orientation="vertical" length="50"/>
+                <segment orientation="vertical" length="10"/>
+                <sequentialNumbers/>
+            </conductor>
+            <conductor num="" conductor_color="" type="multi" element2_name="Foot Switch (NO)" x="0" element1_linked="K1" y="0" displaytext="1" vertirotatetext="270" onetextperfolio="0" color2="#000000" horizrotatetext="0" element1_name="Contacto simples (NO)" bicolor="false" element1="{d61e6974-982b-4a0b-a84c-e424e3f7fbbf}" condsize="1" element2="{13b3a8b8-2ceb-4880-bf15-65cfc799681e}" numsize="7" tension_protocol="" dash-size="1" bus="" freezeLabel="false" conductor_section="" vertical-alignment="AlignRight" terminal1="{b9683546-f0a2-4386-b114-ef1d46b2df3d}" terminalname1="" terminal2="{f8e508cc-0ac1-420b-9b64-b9f012fbd7de}" terminalname2="14" element2_label="S1" element1_label="" function="" horizontal-alignment="AlignBottom" text_color="#000000" formula="" cable="">
+                <sequentialNumbers/>
+            </conductor>
+            <conductor num="" conductor_color="" type="multi" element2_name="Electronic relay" x="0" y="0" element2_linked="" displaytext="1" vertirotatetext="270" onetextperfolio="0" color2="#000000" horizrotatetext="0" element1_name="Fonte unipolar + neutro" bicolor="false" element1="{b861c59d-c9a0-43c4-b0cb-05823c37467d}" condsize="1" element2="{e74e3878-2922-4e5d-b9f3-a28c0671dd9f}" numsize="7" tension_protocol="" dash-size="1" bus="" freezeLabel="false" conductor_section="" vertical-alignment="AlignRight" terminal1="{3b036ac7-3dd0-4f87-8054-e80140a36823}" terminalname1="N" terminal2="{00010eac-39b1-4e53-9763-92e2e05e01e1}" terminalname2="A2" element2_label="K2" element1_label="" function="" horizontal-alignment="AlignBottom" text_color="#000000" formula="" cable="">
+                <segment orientation="horizontal" length="10"/>
+                <segment orientation="vertical" length="380"/>
+                <segment orientation="horizontal" length="200"/>
+                <segment orientation="vertical" length="-60"/>
+                <segment orientation="vertical" length="-10"/>
+                <sequentialNumbers/>
+            </conductor>
+            <conductor num="" conductor_color="" type="multi" element2_name="Foot Switch (NO)" x="0" element1_linked="K2" y="0" displaytext="1" vertirotatetext="270" onetextperfolio="0" color2="#000000" horizrotatetext="0" element1_name="Contacto simples (NO)" bicolor="false" element1="{cf98f08a-0a41-41b5-beab-e416b0015321}" condsize="1" element2="{cf40b253-c8be-4bd7-a882-9356dfdf36fd}" numsize="7" tension_protocol="" dash-size="1" bus="" freezeLabel="false" conductor_section="" vertical-alignment="AlignRight" terminal1="{b3b3dc63-1c98-409b-ab79-3dbaea3556cb}" terminalname1="" terminal2="{209816c7-3f76-4f05-84d1-722f15518734}" terminalname2="13" element2_label="S2" element1_label="" function="" horizontal-alignment="AlignBottom" text_color="#000000" formula="" cable="">
+                <sequentialNumbers/>
+            </conductor>
+            <conductor num="" conductor_color="" type="multi" element2_name="Electronic relay" x="0" element1_linked="" y="0" element2_linked="" displaytext="1" vertirotatetext="270" onetextperfolio="0" color2="#000000" horizrotatetext="0" element1_name="Electronic relay" bicolor="false" element1="{1d789795-331c-4335-bd63-b6791dc0ca13}" condsize="1" element2="{e74e3878-2922-4e5d-b9f3-a28c0671dd9f}" numsize="7" tension_protocol="" dash-size="1" bus="" freezeLabel="false" conductor_section="" vertical-alignment="AlignRight" terminal1="{00010eac-39b1-4e53-9763-92e2e05e01e1}" terminalname1="A2" terminal2="{00010eac-39b1-4e53-9763-92e2e05e01e1}" terminalname2="A2" element2_label="K2" element1_label="K1" function="" horizontal-alignment="AlignBottom" text_color="#000000" formula="" cable="">
+                <segment orientation="vertical" length="10"/>
+                <segment orientation="vertical" length="60"/>
+                <segment orientation="horizontal" length="140"/>
+                <segment orientation="vertical" length="-60"/>
+                <segment orientation="horizontal" length="0"/>
+                <segment orientation="vertical" length="-10"/>
+                <sequentialNumbers/>
+            </conductor>
+            <conductor num="" conductor_color="" type="multi" element2_name="Foot Switch (NC)" x="0" y="0" displaytext="1" vertirotatetext="270" onetextperfolio="0" color2="#000000" horizrotatetext="0" element1_name="Fonte unipolar + neutro" bicolor="false" element1="{b861c59d-c9a0-43c4-b0cb-05823c37467d}" condsize="1" numsize="7" element2="{8d03ef62-825a-4f83-83a2-3838cbf941c1}" tension_protocol="" dash-size="1" bus="" freezeLabel="false" conductor_section="" vertical-alignment="AlignRight" terminal1="{d0cbef7a-4588-4641-9727-e601c0a646ed}" terminalname1="L" terminal2="{faae3ab0-3906-402d-8782-ef9d0ac0413b}" terminalname2="21" element2_label="S0" element1_label="" function="" horizontal-alignment="AlignBottom" text_color="#000000" formula="" cable="">
+                <sequentialNumbers/>
+            </conductor>
+            <conductor num="" conductor_color="" type="multi" element2_name="Electronic relay" x="0" element1_linked="K1" y="0" element2_linked="" displaytext="1" vertirotatetext="270" onetextperfolio="0" color2="#000000" horizrotatetext="0" element1_name="Contacto simples (NC)" bicolor="false" element1="{c2f51e6b-5d15-435a-8f1a-f3526251e146}" condsize="1" element2="{e74e3878-2922-4e5d-b9f3-a28c0671dd9f}" numsize="7" tension_protocol="" dash-size="1" bus="" freezeLabel="false" conductor_section="" vertical-alignment="AlignRight" terminal1="{9472aef6-8807-4083-bb2c-e774011a97d9}" terminalname1="" terminal2="{1040d11a-d254-4623-b48d-acede7ce1975}" terminalname2="A1" element2_label="K2" element1_label="" function="" horizontal-alignment="AlignBottom" text_color="#000000" formula="" cable="">
+                <sequentialNumbers/>
+            </conductor>
+            <conductor num="" conductor_color="" type="multi" element2_name="Foot Switch (NO)" x="0" y="0" displaytext="1" vertirotatetext="270" onetextperfolio="0" color2="#000000" horizrotatetext="0" element1_name="Foot Switch (NC)" bicolor="false" element1="{8d03ef62-825a-4f83-83a2-3838cbf941c1}" condsize="1" numsize="7" element2="{13b3a8b8-2ceb-4880-bf15-65cfc799681e}" tension_protocol="" dash-size="1" bus="" freezeLabel="false" conductor_section="" vertical-alignment="AlignRight" terminal1="{3f32169a-026a-43e8-af61-efa7268f5512}" terminalname1="22" terminal2="{209816c7-3f76-4f05-84d1-722f15518734}" terminalname2="13" element2_label="S1" element1_label="S0" function="" horizontal-alignment="AlignBottom" text_color="#000000" formula="" cable="">
+                <sequentialNumbers/>
+            </conductor>
+            <conductor num="" conductor_color="" type="multi" element2_name="Electronic relay" x="0" element1_linked="K2" y="0" element2_linked="" displaytext="1" vertirotatetext="270" onetextperfolio="0" color2="#000000" horizrotatetext="0" element1_name="Contacto simples (NC)" bicolor="false" element1="{74e73458-889a-42fc-9d2b-7a19612c6975}" condsize="1" element2="{1d789795-331c-4335-bd63-b6791dc0ca13}" numsize="7" tension_protocol="" dash-size="1" bus="" freezeLabel="false" conductor_section="" vertical-alignment="AlignRight" terminal1="{9472aef6-8807-4083-bb2c-e774011a97d9}" terminalname1="" terminal2="{1040d11a-d254-4623-b48d-acede7ce1975}" terminalname2="A1" element2_label="K1" element1_label="" function="" horizontal-alignment="AlignBottom" text_color="#000000" formula="" cable="">
+                <sequentialNumbers/>
+            </conductor>
+            <conductor num="" conductor_color="" type="multi" element2_name="Foot Switch (NO)" x="0" element1_linked="K1" y="0" displaytext="1" vertirotatetext="270" onetextperfolio="0" color2="#000000" horizrotatetext="0" element1_name="Contacto simples (NC)" bicolor="false" element1="{c2f51e6b-5d15-435a-8f1a-f3526251e146}" condsize="1" element2="{cf40b253-c8be-4bd7-a882-9356dfdf36fd}" numsize="7" tension_protocol="" dash-size="1" bus="" freezeLabel="false" conductor_section="" vertical-alignment="AlignRight" terminal1="{d6e0cd1d-504b-405a-810c-7d5ae24c981d}" terminalname1="" terminal2="{f8e508cc-0ac1-420b-9b64-b9f012fbd7de}" terminalname2="14" element2_label="S2" element1_label="" function="" horizontal-alignment="AlignBottom" text_color="#000000" formula="" cable="">
+                <sequentialNumbers/>
+            </conductor>
+            <conductor num="" conductor_color="" type="multi" element2_name="Foot Switch (NO)" x="0" element1_linked="K1" y="0" displaytext="1" vertirotatetext="270" onetextperfolio="0" color2="#000000" horizrotatetext="0" element1_name="Contacto simples (NO)" bicolor="false" element1="{d61e6974-982b-4a0b-a84c-e424e3f7fbbf}" condsize="1" element2="{13b3a8b8-2ceb-4880-bf15-65cfc799681e}" numsize="7" tension_protocol="" dash-size="1" bus="" freezeLabel="false" conductor_section="" vertical-alignment="AlignRight" terminal1="{b3b3dc63-1c98-409b-ab79-3dbaea3556cb}" terminalname1="" terminal2="{209816c7-3f76-4f05-84d1-722f15518734}" terminalname2="13" element2_label="S1" element1_label="" function="" horizontal-alignment="AlignBottom" text_color="#000000" formula="" cable="">
+                <sequentialNumbers/>
+            </conductor>
+        </conductors>
+    </diagram>
+    <collection>
+        <category name="import">
+            <names>
+                <name lang="ca">Elements importats</name>
+                <name lang="cs">Zavedené prvky</name>
+                <name lang="da">Importerede elementer</name>
+                <name lang="de">Importierte Elemente</name>
+                <name lang="el">Εισηγμένα στοιχεία</name>
+                <name lang="en">Imported elements</name>
+                <name lang="es">Elementos importados</name>
+                <name lang="fr">Éléments importés</name>
+                <name lang="hr">Uvezeni elementi</name>
+                <name lang="it">Elementi importati</name>
+                <name lang="ja">インバートされた要素</name>
+                <name lang="nl">Elementen geïmporteerd</name>
+                <name lang="nl_BE">Elementen geïmporteerd</name>
+                <name lang="pl">Elementy importowane</name>
+                <name lang="pt">Elementos importados</name>
+                <name lang="pt_BR">Elementos importados</name>
+                <name lang="ro">Elemente importate</name>
+                <name lang="ru">Импортированные элементы</name>
+                <name lang="sl">Uvoženi elementi</name>
+                <name lang="sv">Importerade element</name>
+                <name lang="tr">İthal öğeler</name>
+                <name lang="uk">Імпортовані елементи</name>
+                <name lang="zh">导入元件</name>
+            </names>
+            <category name="10_electric">
+                <names>
+                    <name lang="cs">Elektrotechnika</name>
+                    <name lang="da">Elektrisk</name>
+                    <name lang="de">Elektrik</name>
+                    <name lang="el">Ηλεκτρικά</name>
+                    <name lang="en">Electric</name>
+                    <name lang="es">Eléctrica</name>
+                    <name lang="fr">Electrique</name>
+                    <name lang="it">Elettrica</name>
+                    <name lang="ja">電気</name>
+                    <name lang="nl">Elektrotechniek</name>
+                    <name lang="pl">Elektrotechnika</name>
+                    <name lang="pt_BR">Elétrica</name>
+                    <name lang="ru">Электротехника</name>
+                    <name lang="zn">电气工程</name>
+                </names>
+                <category name="10_allpole">
+                    <names>
+                        <name lang="cs">Vícežilový</name>
+                        <name lang="da">Flere ledere</name>
+                        <name lang="de">Allpolig</name>
+                        <name lang="el">Πολυγραμμικό</name>
+                        <name lang="en">All-pole</name>
+                        <name lang="es">Multifilar</name>
+                        <name lang="fr">Multifilaire</name>
+                        <name lang="hu">Többvonalas szimbólumok</name>
+                        <name lang="it">Multifilare</name>
+                        <name lang="ja">複線</name>
+                        <name lang="nl">Veel polig</name>
+                        <name lang="pl">Schematy wieloliniowe</name>
+                        <name lang="pt_BR">Multifilar</name>
+                        <name lang="ru">Многополюсные</name>
+                    </names>
+                    <category name="110_network_supplies">
+                        <names>
+                            <name lang="cs">Napájení</name>
+                            <name lang="da">Netværkskilder</name>
+                            <name lang="de">Netzquellen</name>
+                            <name lang="el">Παροχές δικτύου</name>
+                            <name lang="en">Network sources</name>
+                            <name lang="es">Fuentes de red</name>
+                            <name lang="fr">Sources réseau</name>
+                            <name lang="hu">Hálózati források</name>
+                            <name lang="it">Alimentazione da rete</name>
+                            <name lang="ja">電源網</name>
+                            <name lang="nl">Netvoedingen</name>
+                            <name lang="pl">Sieć elektroenergetyczna</name>
+                            <name lang="pt_BR">Alimentação</name>
+                            <name lang="ru">Подвод питания, сеть</name>
+                        </names>
+                        <element name="src_1pn.elmt">
+                            <definition type="element" link_type="simple" hotspot_x="21" hotspot_y="18" width="40" height="40" version="0.100.0">
+                                <uuid uuid="{651fb75f-f645-6d0d-2b65-6ecfb3a72726}"/>
+                                <names>
+                                    <name lang="ar">مصدر وحيد القطبية + محايد N</name>
+                                    <name lang="ca">Font unipolar + neutre</name>
+                                    <name lang="cs">Přípojnice 1f+N</name>
+                                    <name lang="de">Wechselstrom L + N</name>
+                                    <name lang="el">Μονοφασικό + Ουδέτερος</name>
+                                    <name lang="en">Single-pole source + neutral</name>
+                                    <name lang="es">Fuente unipolo + neutro</name>
+                                    <name lang="fr">Source unipolaire + neutre</name>
+                                    <name lang="hu">F + N</name>
+                                    <name lang="it">Sorgente unipolare + neutro</name>
+                                    <name lang="nl">Wisselspanning L + nul N</name>
+                                    <name lang="pl">Linia jednofazowa (dwuprzewodowa)</name>
+                                    <name lang="pt">Fonte unipolar + neutro</name>
+                                    <name lang="ru">Однополюсный + нейтраль</name>
+                                </names>
+                                <informations>Author: The QElectroTech team
+License: see http://qelectrotech.org/wiki/doc/elements_license</informations>
+                                <description>
+                                    <dynamic_text Halignment="AlignLeft" frame="false" x="-5" y="-37.95" z="1" rotation="0" font="Liberation Sans,9,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{0299e777-d64a-454c-9d71-3cd926dfafde}" keep_visual_rotation="false" Valignment="AlignTop" text_from="ElementInfo">
+                                        <text/>
+                                        <info_name>label</info_name>
+                                    </dynamic_text>
+                                    <line end1="none" end2="none" y1="-10" antialias="false" y2="-10" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" length1="1.5" x2="10" length2="1.5"/>
+                                    <line end1="none" end2="none" y1="10" antialias="false" y2="10" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" length1="1.5" x2="10" length2="1.5"/>
+                                    <text x="-12" y="13" rotation="0" font="Liberation Sans,5,-1,5,50,0,0,0,0,0,Regular" color="#000000" text="N"/>
+                                    <text x="-12" y="-7" rotation="0" font="Liberation Sans,5,-1,5,50,0,0,0,0,0,Regular" color="#000000" text="L"/>
+                                    <terminal type="Generic" x="10" y="-10" name="L" uuid="{d0cbef7a-4588-4641-9727-e601c0a646ed}" orientation="e"/>
+                                    <terminal type="Generic" x="10" y="10" name="N" uuid="{3b036ac7-3dd0-4f87-8054-e80140a36823}" orientation="e"/>
+                                </description>
+                            </definition>
+                        </element>
+                    </category>
+                    <category name="380_signaling_operating">
+                        <names>
+                            <name lang="cs">Značení a příkazy</name>
+                            <name lang="de">Melde- und Bedieneinrichtungen</name>
+                            <name lang="el">Σήμανση και χειρισμός</name>
+                            <name lang="en">Signaling and operating</name>
+                            <name lang="es">Señalización y comando</name>
+                            <name lang="fr">Signalétique et commande</name>
+                            <name lang="it">Segnalazione e comando</name>
+                            <name lang="ja">信号と操作</name>
+                            <name lang="nl">Signalering en bediening</name>
+                            <name lang="pl">Obwody sterownicze</name>
+                            <name lang="pt_BR">Sinalização e comando</name>
+                            <name lang="ru">Сигнализация и управление</name>
+                        </names>
+                        <category name="20_push_buttons">
+                            <names>
+                                <name lang="ar">مفاتيح ضاغطة</name>
+                                <name lang="cs">Tlačítka</name>
+                                <name lang="de">Drucktaster</name>
+                                <name lang="el">Μπουτόν</name>
+                                <name lang="en">Push-buttons</name>
+                                <name lang="es">Pulsadores</name>
+                                <name lang="fr">Boutons-poussoirs</name>
+                                <name lang="it">Pulsanti</name>
+                                <name lang="nl">Knop druk</name>
+                                <name lang="pl">Przyciski</name>
+                                <name lang="pt">Botões de pressão</name>
+                                <name lang="ru">Кнопки</name>
+                            </names>
+                            <element name="foot_no.elmt">
+                                <definition type="element" link_type="simple" hotspot_x="20" hotspot_y="30" width="30" height="60" version="0.80">
+                                    <uuid uuid="{f8559cf1-a8d6-45b7-3785-2daa857e9703}"/>
+                                    <names>
+                                        <name lang="ar">مفتاح بدوّاسة (NO)</name>
+                                        <name lang="ca">Interruptor de peu (NO)</name>
+                                        <name lang="cs">Nožní spínač (NO)</name>
+                                        <name lang="de">Fußschalter 2-polig NO</name>
+                                        <name lang="el">Ποδοδιακόπτης, ανοιχτή</name>
+                                        <name lang="en">Foot Switch (NO)</name>
+                                        <name lang="es">Paro de emergencia con pedal (NA)</name>
+                                        <name lang="fr">Interrupteur à pedale (NO)</name>
+                                        <name lang="it">Comando a pedale (NO)</name>
+                                        <name lang="nl">Voetschakelaar (NO)</name>
+                                        <name lang="pl">Łącznik wielozestykowy napędzany nogą NO</name>
+                                    </names>
+                                    <informations>Author: The QElectroTech team
+License: see http://qelectrotech.org/wiki/doc/elements_license</informations>
+                                    <description>
+                                        <line end1="none" end2="none" y1="0" antialias="false" y2="0" style="line-style:dashed;line-weight:thin;filling:none;color:black" x1="-12" length1="1.5" x2="-3" length2="1.5"/>
+                                        <dynamic_text Halignment="AlignLeft" frame="false" x="-3" y="-23" z="2" rotation="0" font="Liberation Sans,3,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{103311ab-7139-4ca2-a914-9e89bc4ec8a7}" Valignment="AlignTop" text_from="UserText">
+                                            <text>13</text>
+                                        </dynamic_text>
+                                        <line end1="none" end2="none" y1="-5" antialias="false" y2="5" style="line-style:normal;line-weight:thin;filling:none;color:black" x1="-9.73" length1="1.5" x2="-13.91" length2="1.5"/>
+                                        <line end1="none" end2="none" y1="5" antialias="false" y2="3" style="line-style:normal;line-weight:thin;filling:none;color:black" x1="-13.91" length1="1.5" x2="-16.42" length2="1.5"/>
+                                        <dynamic_text Halignment="AlignLeft" frame="false" x="-3" y="9" z="6" rotation="0" font="Liberation Sans,3,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{f625d933-1de1-4066-bad0-ac16003441e6}" Valignment="AlignTop" text_from="UserText">
+                                            <text>14</text>
+                                        </dynamic_text>
+                                        <polygon closed="false" y1="20" antialias="true" y2="10" y3="-10" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" x2="0" x3="-6"/>
+                                        <line end1="none" end2="none" y1="-20" antialias="false" y2="-9" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" length1="1.5" x2="0" length2="1.5"/>
+                                        <dynamic_text Halignment="AlignLeft" frame="false" x="-10" y="5" z="12" rotation="0" font="Liberation Sans,9,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{7cef0658-2571-4a65-b7e6-c14252e4b178}" Valignment="AlignTop" text_from="ElementInfo">
+                                            <text/>
+                                            <info_name>label</info_name>
+                                        </dynamic_text>
+                                        <terminal type="Generic" x="0" y="-20" name="13" uuid="{209816c7-3f76-4f05-84d1-722f15518734}" orientation="n"/>
+                                        <terminal type="Generic" x="0" y="20" name="14" uuid="{f8e508cc-0ac1-420b-9b64-b9f012fbd7de}" orientation="s"/>
+                                    </description>
+                                </definition>
+                            </element>
+                            <element name="foot_nc.elmt">
+                                <definition type="element" link_type="simple" hotspot_x="19" hotspot_y="31" width="30" height="60" version="0.80">
+                                    <uuid uuid="{c1def5ee-e53d-8526-8b0e-aa9c1ce6c8bd}"/>
+                                    <names>
+                                        <name lang="ar">مفتاح بدوّاسة (NC)</name>
+                                        <name lang="ca">Interruptor de peu (NC)</name>
+                                        <name lang="cs">Nožní spínač (NC)</name>
+                                        <name lang="de">Fußschalter 2-polig Öffner</name>
+                                        <name lang="el">Ποδοδιακόπτης, κλειστή επαφή</name>
+                                        <name lang="en">Foot Switch (NC)</name>
+                                        <name lang="es">Paro de emergencia con pedal (NC)</name>
+                                        <name lang="fr">Interrupteur à pedale (NC)</name>
+                                        <name lang="it">Comando a pedale (NC)</name>
+                                        <name lang="nl">Voetschakelaar (NC)</name>
+                                        <name lang="pl">Łącznik wielozestykowy napędzany nogą NC</name>
+                                    </names>
+                                    <informations>Author: The QElectroTech team
+License: see http://qelectrotech.org/wiki/doc/elements_license</informations>
+                                    <description>
+                                        <line end1="none" end2="none" y1="0" antialias="false" y2="0" style="line-style:dashed;line-weight:thin;filling:none;color:black" x1="-12" length1="1.5" x2="3" length2="1.5"/>
+                                        <line end1="none" end2="none" y1="-9" antialias="false" y2="-9" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" length1="1.5" x2="7" length2="1.5"/>
+                                        <line end1="none" end2="none" y1="-5" antialias="false" y2="5" style="line-style:normal;line-weight:thin;filling:none;color:black" x1="-9.73" length1="1.5" x2="-13.91" length2="1.5"/>
+                                        <dynamic_text Halignment="AlignLeft" frame="false" x="-3" y="-24" z="4" rotation="0" font="Liberation Sans,3,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{50d62516-a25d-4431-b4bb-ee70971dad6f}" Valignment="AlignTop" text_from="UserText">
+                                            <text>21</text>
+                                        </dynamic_text>
+                                        <dynamic_text Halignment="AlignLeft" frame="false" x="-3" y="10" z="5" rotation="0" font="Liberation Sans,3,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{d91a2d31-da0e-47e2-8236-82b8c18f7c08}" Valignment="AlignTop" text_from="UserText">
+                                            <text>22</text>
+                                        </dynamic_text>
+                                        <line end1="none" end2="none" y1="5" antialias="false" y2="3" style="line-style:normal;line-weight:thin;filling:none;color:black" x1="-13.91" length1="1.5" x2="-16.42" length2="1.5"/>
+                                        <polygon closed="false" y1="20" antialias="true" y2="10" y3="-10" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" x2="0" x3="6"/>
+                                        <line end1="none" end2="none" y1="-20" antialias="false" y2="-9" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" length1="1.5" x2="0" length2="1.5"/>
+                                        <dynamic_text Halignment="AlignLeft" frame="false" x="-10" y="5" z="12" rotation="0" font="Liberation Sans,9,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{7cef0658-2571-4a65-b7e6-c14252e4b178}" Valignment="AlignTop" text_from="ElementInfo">
+                                            <text/>
+                                            <info_name>label</info_name>
+                                        </dynamic_text>
+                                        <terminal type="Generic" x="0" y="-20" name="21" uuid="{faae3ab0-3906-402d-8782-ef9d0ac0413b}" orientation="n"/>
+                                        <terminal type="Generic" x="0" y="20" name="22" uuid="{3f32169a-026a-43e8-af61-efa7268f5512}" orientation="s"/>
+                                    </description>
+                                </definition>
+                            </element>
+                        </category>
+                    </category>
+                    <category name="310_relays_contactors_contacts">
+                        <names>
+                            <name lang="cs">Relé, stykače a kontakty</name>
+                            <name lang="da">Relæer, kontaktorer og kontakter</name>
+                            <name lang="de">Relais, Schütze und Kontakte</name>
+                            <name lang="el">Ηλεκτρονόμοι και επαφές</name>
+                            <name lang="en">Relays, contactors and contacts</name>
+                            <name lang="es">Relevadores, contactores y contactos</name>
+                            <name lang="fr">Relais, contacteurs et contacts</name>
+                            <name lang="hu">Relék, kontaktorok és érintkezők</name>
+                            <name lang="it">Relè, contattori e contatti</name>
+                            <name lang="ja">継電器、接触器、接点</name>
+                            <name lang="nl">Relais, contactoren en contacten</name>
+                            <name lang="pl">Przekaźniki i styczniki</name>
+                            <name lang="pt_BR">Relés, contatores e contatos</name>
+                            <name lang="ru">Реле, пускатели и контакты</name>
+                        </names>
+                        <category name="02_contacts_cross_referencing">
+                            <names>
+                                <name lang="cs">Kontakty s křížovými odkazy</name>
+                                <name lang="da">Kontaker med krydsreference</name>
+                                <name lang="de">Kontakte mit Querverweis</name>
+                                <name lang="el">Επαφές με παραπομπές</name>
+                                <name lang="en">Contacts with cross referencing</name>
+                                <name lang="es">Contactos con referencia cruzada</name>
+                                <name lang="fr">Contacts avec référence croisée</name>
+                                <name lang="it">Contatti con riferimenti incrociati</name>
+                                <name lang="nl">Contacten met kruisreferentie</name>
+                                <name lang="pl">Zestyki (automatyczne oznaczenia)</name>
+                                <name lang="ru">Контакты с перекрестными ссылками</name>
+                            </names>
+                            <category name="01_auxiliary_contacts">
+                                <names>
+                                    <name lang="cs">Pomocné kontakty</name>
+                                    <name lang="da">Hjælpe kontakter</name>
+                                    <name lang="de">Hilfsglieder</name>
+                                    <name lang="el">Βοηθητικές επαφές</name>
+                                    <name lang="en">Auxiliary</name>
+                                    <name lang="es">Contactos auxiliares</name>
+                                    <name lang="fr">Auxilliaires</name>
+                                    <name lang="it">Contatti ausiliari</name>
+                                    <name lang="nl">Hulpcontacten</name>
+                                    <name lang="pl">Zestyki pomocnicze</name>
+                                    <name lang="ru">Внешние</name>
+                                </names>
+                                <element name="con_simple.elmt">
+                                    <definition type="element" link_type="slave" hotspot_x="10" hotspot_y="30" width="20" height="60" version="0.100.0">
+                                        <uuid uuid="{9d34fad7-8a48-2a3e-df68-74d26a8f1012}"/>
+                                        <names>
+                                            <name lang="ar">مُلامس بسيط (NO)</name>
+                                            <name lang="ca">Contacte senzill</name>
+                                            <name lang="cs">Spínací kontakt</name>
+                                            <name lang="de">Schliesser</name>
+                                            <name lang="el">Απλή επαφή, ανοικτή</name>
+                                            <name lang="en">Simple contact</name>
+                                            <name lang="es">Contactor simple</name>
+                                            <name lang="fr">Contact simple</name>
+                                            <name lang="it">Contatto semplice (NO)</name>
+                                            <name lang="nl">contact enkel</name>
+                                            <name lang="pl">Zestyk zwierny</name>
+                                            <name lang="pt">Contacto simples (NO)</name>
+                                            <name lang="ru">Проктой контакт (НР)</name>
+                                        </names>
+                                        <kindInformations>
+                                            <kindInformation name="type">simple</kindInformation>
+                                            <kindInformation name="state">NO</kindInformation>
+                                            <kindInformation name="number">1</kindInformation>
+                                        </kindInformations>
+                                        <informations>Author: The QElectroTech team
+License: see http://qelectrotech.org/wiki/doc/elements_license</informations>
+                                        <description>
+                                            <polygon closed="false" y1="-10" antialias="true" y2="10" y3="20" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="-5" x2="0" x3="0"/>
+                                            <dynamic_text Halignment="AlignLeft" frame="false" x="2.75" y="-9.5" z="2" rotation="0" font="Liberation Sans,9,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{a4a5addc-2580-413c-828c-6e93cfe494ef}" keep_visual_rotation="false" Valignment="AlignTop" text_from="ElementInfo">
+                                                <text/>
+                                                <info_name>label</info_name>
+                                            </dynamic_text>
+                                            <line end1="none" end2="none" y1="-20" antialias="false" y2="-10" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" length1="1.5" x2="0" length2="1.5"/>
+                                            <terminal type="Generic" x="0" y="-20" name="" uuid="{b3b3dc63-1c98-409b-ab79-3dbaea3556cb}" orientation="n"/>
+                                            <terminal type="Generic" x="0" y="20" name="" uuid="{b9683546-f0a2-4386-b114-ef1d46b2df3d}" orientation="s"/>
+                                        </description>
+                                    </definition>
+                                </element>
+                                <element name="con_simple_nf.elmt">
+                                    <definition type="element" link_type="slave" hotspot_x="9" hotspot_y="30" width="20" height="60" version="0.100.0">
+                                        <uuid uuid="{a48a492d-e5e9-8768-2997-a2e4ec843957}"/>
+                                        <names>
+                                            <name lang="ar">مُلامس بسيط (NC)</name>
+                                            <name lang="ca">Contacte simple (NC)</name>
+                                            <name lang="cs">Rozpínací kontakt</name>
+                                            <name lang="de">Öffner</name>
+                                            <name lang="el">Απλή επαφή, κλειστή</name>
+                                            <name lang="en">Simple contact (NC)</name>
+                                            <name lang="es">Contactor simple (NC)</name>
+                                            <name lang="fr">Contact simple (NF)</name>
+                                            <name lang="it">Contatto semplice (NC)</name>
+                                            <name lang="nl">contact normaal gesloten enkel simpel (NC)</name>
+                                            <name lang="pl">Zestyk rozwierny</name>
+                                            <name lang="pt">Contacto simples (NC)</name>
+                                            <name lang="ru">Проктой контакт (НЗ)</name>
+                                        </names>
+                                        <kindInformations>
+                                            <kindInformation name="type">simple</kindInformation>
+                                            <kindInformation name="state">NC</kindInformation>
+                                            <kindInformation name="number">1</kindInformation>
+                                        </kindInformations>
+                                        <informations>Author: The QElectroTech team
+License: see http://qelectrotech.org/wiki/doc/elements_license</informations>
+                                        <description>
+                                            <polygon closed="false" y1="-10" antialias="true" y2="10" y3="20" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="5" x2="0" x3="0"/>
+                                            <line end1="none" end2="none" y1="-9" antialias="false" y2="-9" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" length1="1.5" x2="6" length2="1.5"/>
+                                            <line end1="none" end2="none" y1="-20" antialias="false" y2="-9" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" length1="1.5" x2="0" length2="1.5"/>
+                                            <dynamic_text Halignment="AlignLeft" frame="false" x="5.75" y="-9.5" z="4" rotation="0" font="Liberation Sans,9,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{a146a302-ef1b-41e3-8587-76ab60f555e6}" keep_visual_rotation="false" Valignment="AlignTop" text_from="ElementInfo">
+                                                <text/>
+                                                <info_name>label</info_name>
+                                            </dynamic_text>
+                                            <terminal type="Generic" x="0" y="-20" name="" uuid="{d6e0cd1d-504b-405a-810c-7d5ae24c981d}" orientation="n"/>
+                                            <terminal type="Generic" x="0" y="20" name="" uuid="{9472aef6-8807-4083-bb2c-e774011a97d9}" orientation="s"/>
+                                        </description>
+                                    </definition>
+                                </element>
+                            </category>
+                        </category>
+                        <category name="01_coils">
+                            <names>
+                                <name lang="ar">لفه</name>
+                                <name lang="ca">bobina</name>
+                                <name lang="cs">cívka</name>
+                                <name lang="da">spole</name>
+                                <name lang="de">Spule</name>
+                                <name lang="el">σπείρα</name>
+                                <name lang="en">coil</name>
+                                <name lang="es">bobina</name>
+                                <name lang="fr">bobine</name>
+                                <name lang="hr">zavojnica</name>
+                                <name lang="hu">tekercs</name>
+                                <name lang="it">bobina</name>
+                                <name lang="ja">コイル</name>
+                                <name lang="mn">ороомог</name>
+                                <name lang="nb">Spole</name>
+                                <name lang="nl">spoel</name>
+                                <name lang="pl">cewka</name>
+                                <name lang="pt">bobina</name>
+                                <name lang="pt_BR">bobina</name>
+                                <name lang="ro">bobina</name>
+                                <name lang="ru">катушка</name>
+                                <name lang="sl">tuljava</name>
+                                <name lang="sr">калем</name>
+                                <name lang="tr">bobin</name>
+                            </names>
+                            <element name="comm_electronique.elmt">
+                                <definition type="element" link_type="master" hotspot_x="21" hotspot_y="32" width="40" height="60" version="0.100.0">
+                                    <uuid uuid="{a0157e1e-8c70-46f7-b4f3-fbbb588aad30}"/>
+                                    <names>
+                                        <name lang="ca">Relé electrònic</name>
+                                        <name lang="cs">Elektronické relé</name>
+                                        <name lang="de">Relais elektronisch</name>
+                                        <name lang="el">Ηλεκτρονικό ρελέ</name>
+                                        <name lang="en">Electronic relay</name>
+                                        <name lang="es">Relé electrónico</name>
+                                        <name lang="fr">Relais électronique</name>
+                                        <name lang="hu">Tranzisztoros működtetés</name>
+                                        <name lang="it">Relè a comando elettronico</name>
+                                        <name lang="nl">relais electronisch</name>
+                                        <name lang="nl_BE">Electronisch relais</name>
+                                        <name lang="pl">Przekaźnik elektroniczny</name>
+                                    </names>
+                                    <kindInformations>
+                                        <kindInformation name="type">coil</kindInformation>
+                                    </kindInformations>
+                                    <informations>License: see http://qelectrotech.org/wiki/doc/elements_license</informations>
+                                    <description>
+                                        <rect ry="0" x="-15" y="-10" antialias="false" style="line-style:normal;line-weight:normal;filling:none;color:black" width="30" height="20" rx="0"/>
+                                        <line end1="none" end2="none" y1="0" antialias="false" y2="0" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="-7" length1="1.5" x2="0" length2="1.5"/>
+                                        <line end1="none" end2="none" y1="-6" antialias="false" y2="6" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" length1="1.5" x2="0" length2="1.5"/>
+                                        <line end1="none" end2="none" y1="20" antialias="false" y2="10" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" length1="1.5" x2="0" length2="1.5"/>
+                                        <line end1="none" end2="none" y1="-20" antialias="false" y2="-10" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="0" length1="1.5" x2="0" length2="1.5"/>
+                                        <dynamic_text Halignment="AlignLeft" frame="false" x="-14" y="10" z="8" rotation="0" font="Liberation Sans,4,-1,5,25,0,0,0,0,0,Regular" text_width="-1" uuid="{89969859-879e-43c2-9a52-a48bf7e3bc3b}" keep_visual_rotation="false" Valignment="AlignTop" text_from="UserText">
+                                            <text>A2</text>
+                                        </dynamic_text>
+                                        <dynamic_text Halignment="AlignLeft" frame="false" x="-14" y="-25" z="9" rotation="0" font="Liberation Sans,4,-1,5,25,0,0,0,0,0,Regular" text_width="-1" uuid="{96ec5abe-9642-4b22-b49b-7e97522dfbb9}" keep_visual_rotation="false" Valignment="AlignTop" text_from="UserText">
+                                            <text>A1</text>
+                                        </dynamic_text>
+                                        <dynamic_text Halignment="AlignLeft" frame="false" x="16" y="-12" z="10" rotation="0" font="Liberation Sans,9,-1,5,50,0,0,0,0,0,Regular" text_width="-1" uuid="{88dc4499-ea44-436b-b57e-5419557a816b}" keep_visual_rotation="false" Valignment="AlignTop" text_from="ElementInfo">
+                                            <text/>
+                                            <info_name>label</info_name>
+                                        </dynamic_text>
+                                        <polygon closed="false" y1="-8" antialias="false" y2="-2" y3="2" style="line-style:normal;line-weight:normal;filling:none;color:black" x1="7" y4="8" x2="0" x3="0" x4="7"/>
+                                        <terminal type="Generic" x="0" y="20" name="A2" uuid="{00010eac-39b1-4e53-9763-92e2e05e01e1}" orientation="s"/>
+                                        <terminal type="Generic" x="0" y="-20" name="A1" uuid="{1040d11a-d254-4623-b48d-acede7ce1975}" orientation="n"/>
+                                    </description>
+                                </definition>
+                            </element>
+                        </category>
+                    </category>
+                </category>
+            </category>
+        </category>
+    </collection>
+</project>
