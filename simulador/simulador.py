@@ -263,7 +263,8 @@ def main():
                  if u in e["vinculos"] and e["tipo_contato"] != "simple"}
         desc = ", ".join(nomes_tipo.get(t, t) for t in tipos)
         print(f"Temporizador {elementos[u]['nome']}: {T:g} s ({desc})")
-    print("\nEstado inicial:", sim.resolver())
+    situacao = sim.resolver()
+    print(f"\nEstado inicial: {sim.estado()}   [{situacao}]")
     print("""
 Comandos:
   S1          pulso (pressiona e solta)

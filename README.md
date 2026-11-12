@@ -27,6 +27,9 @@ Exemplo (reversão com intertravamento) / *Example (reversing starter with inter
   pressiona S2   -> K1=desligada, K2=ENERGIZADA   [estável]
 ```
 
+Exemplos incluídos / *Included examples* (`circuitos-qet/`): partida direta, reversão com intertravamento,
+partida temporizada, estrela-triângulo / *DOL, reversing, timed start, star-delta*.
+
 ## Como usar / How to use
 
 Requer Python 3.8+ (sem bibliotecas extras). / *Requires Python 3.8+ (no extra libraries).*
