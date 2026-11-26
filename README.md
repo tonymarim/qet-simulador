@@ -50,6 +50,17 @@ Funciona sem internet; `index.html` e `motor.js` precisam ficar na mesma pasta.
 latches), click the breaker or the thermal relay. Works offline; keep `index.html` and `motor.js`
 together.*
 
+### Instalar como aplicativo / *Install as an app*
+
+No **Chrome** ou no **Edge**, abra o site e clique em **Instalar** (ícone na barra de endereço).
+O simulador ganha ícone no menu, abre em janela própria, **funciona sem internet** e passa a aparecer
+no **botão direito sobre um arquivo `.qet` > Abrir com > qet-simulador** (o QElectroTech continua sendo
+o programa padrão do duplo clique). Para outros PCs basta passar o link: não precisa de instalador
+nem de administrador. No Firefox o site funciona, mas não instala.
+
+*In Chrome or Edge, click **Install** in the address bar: the simulator works offline and shows up in
+"Open with" for `.qet` files.*
+
 **Testes de paridade / *Parity tests*:** `python tests/paridade.py` e `node tests/paridade.js`
 (requer `npm i @xmldom/xmldom`) devem produzir a mesma saída. / *must produce identical output.*
 

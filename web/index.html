@@ -4,6 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>qet-simulador · visualizador</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#1e3a5f">
+<link rel="icon" href="icones/icone-192.png">
 <style>
   :root { --borda: #c9c9c9; --fundo: #f4f4f2; --texto: #222; }
   * { box-sizing: border-box; }
@@ -59,7 +62,10 @@
 <div id="avisos"></div>
 <div id="area">
   <div id="vazio">Escolha um arquivo <b>.qet</b> acima ou arraste-o para cá.<br>
-    Tudo roda no seu navegador: nada é enviado para a internet.</div>
+    Tudo roda no seu navegador: nada é enviado para a internet.
+    <p id="dica-instalar" style="display:none; font-size:13px; margin:14px 0 0">
+      <b>Dica:</b> no Chrome ou no Edge, use <b>Instalar</b> (ícone na barra de endereço) para ter o simulador
+      como aplicativo, sem internet, e abrir arquivos <b>.qet</b> pelo botão direito &gt; <b>Abrir com</b>.</p></div>
   <svg id="folha" xmlns="http://www.w3.org/2000/svg"></svg>
   <aside id="painel">
     <h2>Como usar</h2>
@@ -741,6 +747,18 @@ const vazio = document.getElementById("vazio");
   e.preventDefault(); vazio.classList.remove("arrastando");
 }));
 document.addEventListener("drop", e => abrirArquivo(e.dataTransfer.files[0]));
+
+/* Aplicativo instalado: guarda o simulador para usar sem internet e recebe arquivos .qet
+   do "Abrir com" do sistema (botão direito no arquivo > Abrir com > qet-simulador). */
+if ("serviceWorker" in navigator && location.protocol.startsWith("http"))
+  navigator.serviceWorker.register("sw.js").catch(() => {});
+// Mostra a dica de instalação só no navegador (não dentro do aplicativo já instalado)
+if (location.protocol.startsWith("http") && !matchMedia("(display-mode: standalone)").matches)
+  document.getElementById("dica-instalar").style.display = "";
+if ("launchQueue" in window)
+  window.launchQueue.setConsumer(async params => {
+    if (params.files && params.files.length) abrirArquivo(await params.files[0].getFile());
+  });
 </script>
 </body>
 </html>
